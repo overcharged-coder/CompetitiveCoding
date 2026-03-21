@@ -1,3 +1,8 @@
+/*
+Problem Name: King Escape
+Link to problem: https://codeforces.com/contest/1033/problem/A
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
