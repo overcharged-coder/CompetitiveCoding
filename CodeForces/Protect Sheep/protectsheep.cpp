@@ -1,3 +1,8 @@
+/*
+Problem Name: Protect Sheep
+Link to problem: https://codeforces.com/contest/948/problem/A
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

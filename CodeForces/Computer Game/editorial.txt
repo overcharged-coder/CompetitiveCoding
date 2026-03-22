@@ -1,0 +1,1 @@
+The basic premise of this problem is that we can just do a DFS with recursion on the grid, and stop if we hit a 1. If we get to the other side safely, the level is possible, and if not, the level is not possible.

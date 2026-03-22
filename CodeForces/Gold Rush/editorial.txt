@@ -1,0 +1,1 @@
+Splitting the gold is relatively simple: we can only split it if the number is divisible by three. Since there are no other operations we can do, the only way to (potentially) reach m is by doing the operation (if possible) on every pile of gold we get until we can't anymore. If we reach m before that, we know that it is possible to get m through operations.

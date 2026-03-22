@@ -1,3 +1,8 @@
+/*
+Problem Name: Computer Game
+Link to problem: https://codeforces.com/contest/1598/problem/A
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

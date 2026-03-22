@@ -1,3 +1,8 @@
+/*
+Problem Name: Gold Rush
+Link to problem: https://codeforces.com/contest/1829/problem/D
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

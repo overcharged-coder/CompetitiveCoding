@@ -1,0 +1,1 @@
+Since we have a low number of total squares in the grid (2500 max only), we can use a brute-force approach. The basic premise is that it's possible to just do a single turn's worth of work (which is just dropping each stone one square if the square below is empty), and then we can just repeat that until it's deemed done by checking the grid.
