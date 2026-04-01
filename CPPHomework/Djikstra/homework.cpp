@@ -3,7 +3,7 @@ using namespace std;
 
 void djikstra(int n, vector<vector<pair<int, int>>>& adjacency_list, int source, vector<long long>& distance) {
     // priority queue to store the nodes to explore, ordered by their current distance from the source
-    priority_queue<pair<long long, int>, vector<pair<long long, int>>, greater<pair<long long, int>>> dji_queue;
+    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> dji_queue;
     // push the source node with distance 0 into the priority queue and set its distance to 0
     dji_queue.push({0, source});
     distance[source] = 0;
@@ -16,8 +16,7 @@ void djikstra(int n, vector<vector<pair<int, int>>>& adjacency_list, int source,
         if (dist > distance[node]) continue;
         for (int i = 0; i < adjacency_list[node].size(); i++) {
             // initialize neighbor and weight to the neighbor node and edge weight from the adjacency list
-            int neighbor = adjacency_list[node][i].first;
-            int weight = adjacency_list[node][i].second;
+            auto [neighbor, weight] = adjacency_list[node][i];
             // check if the path to the current neighbor is shorter than the previously known path
             if (distance[node] + weight < distance[neighbor]) {
                 distance[neighbor] = distance[node] + weight;
