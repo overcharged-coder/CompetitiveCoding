@@ -1,6 +1,6 @@
 /*
-Problem Name: 
-Link to problem: 
+Problem Name: Simply Sitting on Chairs
+Link to problem: https://codeforces.com/contest/2210/problem/B
 */
 
 #include <bits/stdc++.h>
