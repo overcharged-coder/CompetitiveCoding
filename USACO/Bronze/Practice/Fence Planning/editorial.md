@@ -1,0 +1,3 @@
+The number of moo-networks is the number of cows who only moos at one other cow, not two other cows. We can loop each of these cows and find the moo-network that cow is connected to.
+
+When we get each moo-network, it's easy to identify the smallest perimeter triangle. We just need four cows with special values: lowest x, highest x, lowest y, and highest y. The perimeter of a moo-network is 2(highest x - lowest x) + 2(highest y - lowest y). All other cows will be contained in this because these are the cows with the least and greatest x/y values.x

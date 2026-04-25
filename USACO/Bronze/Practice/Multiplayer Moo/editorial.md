@@ -1,0 +1,2 @@
+# Multiplayer Moo Editorial
+The idea of this problem is that we should get all the regions and do our computation from there. First, we start off with calibrating the given grid so that the ids are in counting order (from 1 to number of distinct ids - 1). Then, the 3 step operation occurs. We start with a Breadth First Search to identify all the seperate regions as well as giving region IDs, and a variable to track the greatest one. This completes the first part of the problem. Now, we can move onto the second part. 
