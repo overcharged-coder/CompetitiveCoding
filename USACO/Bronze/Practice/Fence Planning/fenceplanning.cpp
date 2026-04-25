@@ -1,6 +1,6 @@
 /*
-Problem Name: 
-Link to problem: 
+Problem Name: Fence Planning
+Link to problem: https://usaco.org/index.php?page=viewproblem2&cpid=944
 */
 
 #include <bits/stdc++.h>
