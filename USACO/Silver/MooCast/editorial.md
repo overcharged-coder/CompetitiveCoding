@@ -1,0 +1,5 @@
+# Moocast Editorial
+The basic idea of the problem is that we should run a DFS on the direct recievers of a broadcasting cow to find the total messages possible through relay for said cow. We just need to make one optimization: make an adjacency list first for every cow (an 'adjacent' cow is one that can be directly broadcasted to from a certain cow) so we can save the time for scanning the list for direct recievers of the broadcasting cow. Finally, add on a visited vector to prevent infinity loops for every main cow and we have our answer.
+
+## Time Complexity
+The part that takes the most time is the DFS. Here we have a time complexity of **O(n^2)**, which passes only because n is so small (200 maximum). This is because we mark the whole cow list of size as visited (in worst case where all cows can broadcast to each other) while doing DFS. Since we do this for n cows, we get n*n or n^2 as our complexity.
