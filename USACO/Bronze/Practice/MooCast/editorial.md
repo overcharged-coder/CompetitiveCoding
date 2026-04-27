@@ -1,0 +1,2 @@
+**Moocast Editorial**
+The basic idea of the problem is that we should run a DFS on the direct recievers of a broadcasting cow to find the total messages possible through relay for said cow. We just need to make one optimization: make an adjacency list first for every cow (an 'adjacent' cow is one that can be directly broadcasted to from a certain cow) so we can save the time for scanning the list for ***

@@ -1,6 +1,6 @@
 /*
-Problem Name: 
-Link to problem: 
+Problem Name: Moocast
+Link to problem: https://usaco.org/index.php?page=viewproblem2&cpid=668
 */
 
 #include <bits/stdc++.h>
