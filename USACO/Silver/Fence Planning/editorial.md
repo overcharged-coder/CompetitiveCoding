@@ -1,3 +1,5 @@
-The number of moo-networks is the number of cows who only moos at one other cow, not two other cows. We can loop each of these cows and find the moo-network that cow is connected to.
+# Fence Planning Editorial
+The basic idea of the problem is that we can run a DFS on a cow to create a connection to all its neighbors, and continue until we can complete the whole network. Once we have a moo network, we can find its perimeter by subtracting the minimum x coordinate from the maximum x coordinate and adding the maximum y coordinate minus the minimum y coordinate. To make the DFS algorithm more efficient, instead of scanning the moo connections for each cow repeatedly, we can create an adjacency list to store moo connections. We also need a visited vector to prevent infinity loops while identifying moo networks.
 
-When we get each moo-network, it's easy to identify the smallest perimeter triangle. We just need four cows with special values: lowest x, highest x, lowest y, and highest y. The perimeter of a moo-network is 2(highest x - lowest x) + 2(highest y - lowest y). All other cows will be contained in this because these are the cows with the least and greatest x/y values.x
+## Time Complexity
+The part that takes the most time is the DFS. The time complexity is **O(N^2)**, which only passes because N is so small ()
