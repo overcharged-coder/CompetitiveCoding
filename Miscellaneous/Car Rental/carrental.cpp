@@ -7,16 +7,16 @@ Link to problem:
 using namespace std;
 
 int main() {
-    int n, cars = 1; cin >> n; vector<pair<int, int>> cartimes(n); vector<tuple<int, int, int>> merged; 
-    for (int i = 0; i < n; i++) cin >> cartimes[i].first >> cartimes[i].second;
-    sort(cartimes.begin(), cartimes.end());
+    int n, cars = 0, cars_cur = 0, time; cin >> n; vector<pair<int, bool>> start_finish;
     for (int i = 0; i < n; i++){
-        if (merged.empty() || cartimes[i].first >= get<1>(merged[merged.size() - 1])) merged.push_back({cartimes[i].first, cartimes[i].second, 0});
-        else{
-            get<1>(merged[merged.size() - 1]) = max(get<1>(merged[merged.size() - 1]), cartimes[i].second);
-            get<2>(merged[merged.size() - 1])++;
-        }
+        cin >> time; start_finish.push_back({time, true});
+        cin >> time; start_finish.push_back({time, false});
     }
-    for (int i = 0; i < merged.size(); i++) cars += get<2>(merged[i]);
+    sort(start_finish.begin(), start_finish.end());
+    for (int i = 0; i < 2 * n; i++){
+        if (start_finish[i].second == true) cars_cur++;
+        else if (start_finish[i].second == false) cars_cur--;
+        cars = max(cars_cur, cars);
+    }
     cout << cars;
 }
