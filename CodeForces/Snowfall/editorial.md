@@ -1,0 +1,5 @@
+# Snowfall Editorial
+The basic idea is that each number falls into four important categories: divisible by 6, 2, 3, or none of the above. The way we can get numbers divisible by 6 is it having 2 and 3 naturally in it's prime factorization, or it having 2/3 in it's prime factorization and multiplying it by a number that has 3/2 in it's factorization. Therefore, to have the minimum amount of subarrays whose product is divisible by 6, is to seperate the 2s and the 3s. It's also required to put the divisible by 6s at an end, since all subarrays containing such numbers are immediately divisible by 6. Following these rules, it doesn't matter whether you use the ordering 6, 2, none, 3 or 2, none, 3, 6.
+
+## Time Complexity
+For each test case, we categorize each number in the vector and print them, giving us a complexity of N. Since N cannot be at maximum every test case (N's sum across all test cases cannot exceed 2 * 10^5 as written in the problem), we have a time complexity of **O(T + N)**.
