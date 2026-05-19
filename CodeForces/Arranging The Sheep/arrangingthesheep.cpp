@@ -7,9 +7,9 @@ Link to problem: https://codeforces.com/contest/1520/problem/E
 using namespace std;
 
 int main() {
-    int t, n; string sheepGame; cin >> t;
+    int t, n, numSheep, midSheep; long long moves; string sheepGame; cin >> t; vector<int> sheepPos;
     for (int i = 0; i < t; i++){
-        int numSheep, midSheep; long long moves = 0; cin >> n >> sheepGame; vector<int> sheepPos;
+        cin >> n >> sheepGame; 
         for (int j = 0; j < sheepGame.size(); j++){
             if (sheepGame[j] == '*') sheepPos.push_back(j);
         }
@@ -19,5 +19,6 @@ int main() {
         }
         for (int j = 0; j < numSheep; j++) moves += abs(sheepPos[j] - (sheepPos[midSheep] - midSheep + j));
         cout << moves << endl;
+        sheepPos.clear();
     }
 }
