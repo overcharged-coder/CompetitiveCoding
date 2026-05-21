@@ -1,0 +1,5 @@
+# Forest Queries Editorial
+The basic idea of the problem is that we should use 2-dimensional prefix sums. Since we need to store both rows and columns, the best way to do these prefix sums is by calculating the prefix sums for each row, and then for each column. Now, when given a query, the lower right point will be the number of trees from that point to the whole upper-right grid. Since we usually need a portion of this actual grid, we need to substract the count right of the lower left point, if exists. Then, substract the number above the top right point, if existing. If both of the above exist, then we need to take the x coordinate of the former, and the y coordinate of the latter, and then combine these two and add back the value for this coordinate to avoid double counting.
+
+## Time Complexity
+The input costs us the most time, which is N^2. This is because no other loop is double-stacked like N. Therefore, the total time complexity is **O(N^2)**
