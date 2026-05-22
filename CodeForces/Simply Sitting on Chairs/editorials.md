@@ -1,0 +1,1 @@
+# Simply Sitting On Chairs Editorial
