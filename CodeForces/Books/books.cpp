@@ -1,21 +1,20 @@
 /*
-Problem Name: 
-Link to problem: 
+Problem Name: Books
+Link to problem: https://codeforces.com/problemset/problem/279/B
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-    int n, t, a = 0, b = 0; long long curTime = 0; cin >> n >> t; vector<int> books(n);
+    int n, t, j = 0, maxBooks = INT_MIN; long long curTime = 0; cin >> n >> t; vector<int> books(n);
     for (int i = 0; i < n; i++) cin >> books[i];
-    for (a = 0; a < n; a++){
-        if (curTime + books[a] < t) curTime += books[a];
-        else{
-            if (a == n - 1) continue;
-            if (books[a + 1] - books[b + 1] < 0) b++;
-            else break;
+    for (int i = 0; i < n; i++){
+        curTime += books[i];
+        while (curTime > t){
+            curTime -= books[j]; j++;
         }
+        maxBooks = max(maxBooks, (i - j) + 1);
     }
-    cout << (a - b) + 1;
+    cout << maxBooks;
 }   
