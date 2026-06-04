@@ -1,0 +1,5 @@
+# Books Editorial
+The basic idea of the problem is that we can move one pointer all the way until the time exceeds the limit, then bring the other pointer forward until it the time goes under/equal to the limit, and repeat to get all the possible ways he can read books in the given time. In this way we can take the maximum of all the possible ways he can read books, and this number is our answer.
+
+## Time Complexity
+The highest time complexity comes in the curTime > t loop. If we imagine a case like: [1, 1, 1, 1, 1, 1000] and t = n, then the first pointer i will traverse the whole array, until the second pointer j will do the same because the last element is over the limit by a great degree. This will cause a time complexity of N *only for this iteration*, so the overall time complexity is still **O(N)**, the time complexity for the parent loop.
