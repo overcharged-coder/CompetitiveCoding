@@ -12,6 +12,7 @@ My coding files :)
 ## CodeForces
 
 - [A Simple Sequence](CodeForces/A%20Simple%20Sequence)
+- - [A Simple Sequence](CodeForces/A%20Simple%20Sequence)
 - [Computer Game](CodeForces/Computer%20Game)
 - [Divide by three, multiply by two](CodeForces/Divide%20by%20three%2C%20multiply%20by%20two)
 - [DZY Loves Chessboard (BFS solution)](CodeForces/DZY%20Loves%20Chessboard%20%28BFS%20solution%29)
